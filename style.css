@@ -1,0 +1,529 @@
+/*Fonty*/
+@font-face {
+    font-family: 'Lato';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Lato Italic'), local('Lato-Italic'), url(https://fonts.gstatic.com/s/lato/v16/S6u8w4BMUTPHjxsAXC-q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v16/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Lato Bold'), local('Lato-Bold'), url(https://fonts.gstatic.com/s/lato/v16/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* zmienne */
+  :root {
+     --pomaranczowy: rgba(255, 197, 61, 0.993);
+     --lekki-pomaranczowy: rgba(255, 197, 61, 0.5);
+     --b-lekki-pomaranczowy: rgba(255, 197, 61, 0.2);
+     --rozowy: rgb(253, 118, 147);
+     --lekki-rozowy: rgba(253, 118, 147, 0.3);
+  }
+ 
+/*cała reszta */
+html {
+    box-sizing: border-box;
+    font-family: Lato, sans-serif;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+    /* overflow: hidden; */
+    background-image: linear-gradient(90deg, var(--pomaranczowy) 0%, var(--rozowy) 20%, rgba(196, 106, 248, 0.918) 80%);
+    background-size: 100vw, auto;
+    min-height: 100vh;
+  }
+
+  .cover{
+      margin-left: 5%;
+      margin-right: 5%;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: center; 
+      margin-top: 0;
+      align-content: flex-start;
+      background-color: white;
+      height: 100vh;
+    }
+
+  .cover > * {
+    width:100%;
+  }
+
+  header{
+    font-size: 2rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+  }
+  /* nawigacja */
+  .navBar {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0px;
+      padding: 20px;
+  }
+  .navBar a{
+      margin: 30px;
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.671);
+      font-weight: bold;
+      font-size: 1.3rem;
+  }
+/* obrazek */
+  .pic{
+      margin:0px;
+      min-height: 80vh;
+      background: white url(img.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 50%;
+      display: flex;
+      border:0;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+  }
+
+  .pic header{
+    font-size: 200%;
+    color: white;
+    background-color: rgb(0,0,0,0.5);
+    width: 100%;
+    line-height: 0;
+    padding: 20px;
+    padding-bottom: 0;
+    margin: 0;
+    height: 40%;
+    letter-spacing: 0.1rem;
+  }
+  .pic .greeting{
+    font-size: 250%;
+    margin-top: 3%;
+    letter-spacing: 0.3rem;;
+  }
+  .fa {
+    padding: 10px;
+    padding-bottom: 0;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+    border-radius: 50%;
+    color: white;
+    margin: 0 10px; 
+  }
+
+/* treść */
+.content{
+  font-size: 1.2rem;
+  display: flex;
+  background-color: white;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 1000px;
+  flex-direction: column;
+}
+/* Kontakt i CV */
+.content .buttons{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.content .buttons .beingNice{
+  font-size: 2rem;
+  color: black;
+  letter-spacing: 0.1rem;
+  width: 100%;
+}
+.clickIt{
+  display:flex;
+  width: 100%;
+  justify-content: center;
+  width: 100%;
+}
+.btn{
+  font-size: 1.5rem;
+  background: linear-gradient(270deg, var(--pomaranczowy) 24%, var(--rozowy) 78.5%);
+  border-radius: 15px;
+  transition-property: background-color;
+  color: white;
+  text-decoration: none;
+}
+.clickIt .btn{
+  display: inline-block;
+  position: relation;
+  padding: 10px 30px;
+  margin: 0 20px;
+}
+
+.btn:hover {
+  background: var(--rozowy);
+  color: white;
+}
+
+.btn:active {
+  background: white;
+  border: solid var(--rozowy);
+  color: var(--rozowy);
+}
+
+/* About me */
+.aboutMe {
+  position: relative;
+  box-shadow: 6px 6px 20px var(--lekki-rozowy);
+  width: 60%;
+  height: 400px;
+  margin-left: 0;
+  margin-right: 40%;
+  margin-top: 2%;
+}
+.aboutMe header{
+  padding: 20px;
+  text-align: left;
+  padding-left: 20%;
+}
+
+.aboutMe .sec1{
+  display: flex;
+  position: absolute;
+  margin: 10%;
+  width: 150%;
+  box-shadow: 6px 6px 20px var(--lekki-rozowy);
+  padding: 20px;
+  color: rgba(0, 0, 0, 0.77);
+  padding-right: 50px;
+  align-items: center;
+  line-height: 1.5;
+  background-color: white;
+  top: 0;
+}
+.sec1 img{
+  width: 170px;
+  height: 180px;
+  border-radius: 50%;
+  margin-right: 10px;
+  border: solid var(--rozowy);
+}
+.sec1 .myData{
+border-right: var(--rozowy) 4px dashed;
+text-align: left;
+padding: 10px;
+width: 35%;
+}
+.sec1 .lifeStory{
+  text-align: justify;
+  padding: 10px;
+  margin-left: 10px;
+  width: 60%;
+}
+
+/* Skills */
+.skills {
+  position: relative;
+  box-shadow: 0px 6px 20px var(--lekki-pomaranczowy);
+  width: 60%;
+  height: 450px;
+  margin-left: 40%;
+  margin-right: 0;
+  margin-top: 2%;
+}
+
+.skills header{
+  padding: 20px;
+  text-align: left;
+  padding-left: 10%;
+}
+
+.skills .sec2{
+  display: flex;
+  position: absolute;
+  width: 150%;
+  box-shadow: 0px 6px 20px var(--lekki-pomaranczowy);
+  color: rgba(0, 0, 0, 0.77);
+  align-items: center;
+  line-height: 1.5;
+  background-color: white;
+  top: 20%;
+  right: 0;
+  justify-items: center;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  flex: 1, 2, 1;
+}
+
+.sec2 img{
+  box-sizing: content-box;
+  width: 200px;
+  height: 250px;
+  margin: 10px 0;
+  padding: 10px 100px 10px 30px;
+}
+
+.sec2 .line{
+  border-right: dotted var(--pomaranczowy) 4px;
+}
+
+.sec2 figcaption{
+  margin-right: 10%;
+}
+
+/* portfolio */
+.gallery{
+  background-color: white;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  height: 110vh;
+  justify-content: center;
+  flex: 1;
+}
+
+.gallery header{
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 20px;
+}
+.gallery .sec3{
+  position: relative;
+  display: grid;
+  overflow: hidden;
+  grid-gap: 0;
+  grid-template-columns: 1.2fr 1fr 1.2fr 1fr;
+  grid-template-rows: 4fr 4fr;
+  grid-template-areas: 
+  "tall item1 item1 item2"
+  "tall item3 item4 item4";
+}
+.gallery .sec3 > *{
+  overflow: hidden;
+}
+.gallery .sec3 img{
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  object-fit: cover;
+}
+.gallery .sec3 .pic3{
+  position: relative;
+  grid-area: item1;
+}
+.gallery .sec3 .pic2{
+  grid-area: tall;
+}
+.gallery .sec3 .pic4{
+  grid-area: item2;
+}
+.gallery .sec3 .pic1{
+  grid-area: item3;
+}
+.gallery .sec3 .pic5{
+  grid-area: item4;
+  position: relative;
+}
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    align-items: center;
+    transition: 0.2;
+    transform: translateY(-100%);
+    }
+
+.pic3 .overlay{
+    background: var(--b-lekki-pomaranczowy);
+}
+.pic5 .overlay{
+  background: var(--lekki-rozowy);
+}
+
+.pic3:hover .overlay {
+  transform: translateY(0);
+  }
+.pic5:hover .overlay {
+    transform: translateY(0);
+    }
+.picButton{
+  width: 15%;
+  height: 15%;
+  align-self: flex-end;
+  margin-bottom: 10%;
+  text-align: center;
+  padding: 10px;
+}
+.pic3 .picButton{
+  margin-left: 10%;
+}
+.pic5 .picButton{
+  margin-right: 10%;
+  margin-left: auto;
+}
+.overlay p{
+  color: white;
+  padding: 10px 5%;
+  text-align: justify;
+}
+.pic3 .overlay p{
+  margin-right: 10%;
+}
+.pic5 .overlay p{
+  margin-left: 10%;
+  margin-right: 0;
+}
+.picHeader{
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+.pic5 .overlay p.picHeader{
+  margin-right: 0;
+  margin-left: auto;
+}
+.picText{
+  margin-top: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* formularz */
+.form {
+  width: 100%;
+  margin-top: 5%;
+  background-color: var(--b-lekki-pomaranczowy);
+}
+
+.form header{
+  margin-left: 20%;
+  text-align: left;
+  padding: 10px;
+}
+
+.form .sec4{
+  display:flex;
+}
+
+.form .sec4 .form{
+  margin-bottom: 2%;
+  margin-top: 10px;
+  width:40%;
+  height: 80vh;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.formLeft{
+  position: relative;
+  background-color: var(--rozowy);
+  margin-left: 10%;
+  justify-content: space-between;
+}
+
+.formLeft .triangle{
+  position: absolute;
+  width: 15%;
+  height: 13%;
+  left: 90%;
+  top: 5%;
+  background: var(--rozowy);
+  transform: rotate(45deg);
+}
+
+.formLeft p{
+  color: white;
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.describeQuestion{
+padding: 10% 40% 10% 10%;
+}
+
+.post{
+  padding: 10% 40% 10% 10%;
+}
+.post .socialMedia{
+  margin:10px 0;
+}
+.post .fa{
+  margin: 0 5px 0 0;
+}
+.post .adresses{
+  margin: 0;
+}
+
+.form .sec4 .formRight{
+  background-color: white;
+}
+
+.formRight header{
+  margin-top: 7%;
+  margin-left: 10%;
+}
+
+.formRight form{
+  margin-top: 7%;
+  margin-left: 10%;
+}
+
+.formRight .sec5{
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  margin: 0 10%;
+}
+
+.sec5 > * {
+height: 10%;
+padding: 20px;
+font-size: 1.1rem;
+font-family: Lato, sans-serif;
+border-radius: 15px;
+border: solid var(--rozowy);
+}
+
+.sec5 textarea {
+  height:20%;
+  
+}
+
+input[type="submit"] {
+  align-self: flex-end;
+  width: 30%;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+}
+
+/* autor */
+.author{
+  padding: 20px;
+  margin: 3% 0;
+  font-size: 1rem;
+  font-family: lato, sans-serif;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.6)
+}
+
