@@ -79,7 +79,9 @@ html {
       display: flex;
       justify-content: flex-end;
       margin: 0px;
-      padding: 20px;
+  }
+  .navigation{
+    display: flex;
   }
   .navBar a{
       margin: 30px;
@@ -244,7 +246,7 @@ width: 35%;
   height: 450px;
   margin-left: 40%;
   margin-right: 0;
-  margin-top: 2%;
+  top: 50px;
 }
 
 .skills header{
@@ -283,9 +285,6 @@ width: 35%;
   border-right: dotted var(--pomaranczowy) 4px;
 }
 
-.sec2 figcaption{
-  margin-right: 10%;
-}
 
 /* portfolio */
 .gallery{
@@ -457,11 +456,12 @@ width: 35%;
 }
 
 .describeQuestion{
-padding: 10% 40% 10% 10%;
+padding: 20px;
+margin-right: 10%;
 }
 
 .post{
-  padding: 10% 40% 10% 10%;
+  padding: 20px;
 }
 .post .socialMedia{
   margin:10px 0;
@@ -469,10 +469,13 @@ padding: 10% 40% 10% 10%;
 .post .fa{
   margin: 0 5px 0 0;
 }
-.post .adresses{
+.post .addresses{
   margin: 0;
+  padding: 10px;
 }
-
+.addresses .hoverAddress{
+  display: none;
+}
 .form .sec4 .formRight{
   background-color: white;
 }
@@ -509,6 +512,10 @@ border: solid var(--rozowy);
   
 }
 
+.sec5 .btn{
+width: 100px;
+}
+
 input[type="submit"] {
   align-self: flex-end;
   width: 30%;
@@ -527,3 +534,173 @@ input[type="submit"] {
   color: rgba(0, 0, 0, 0.6)
 }
 
+/* media */
+@media (max-width: 900px) {
+  .formLeft .triangle{
+    display: none;
+  }
+  .skills{
+    margin-top: 50px;
+  }
+  .gallery{
+    margin-top:
+  }
+  .formLeft p{
+    text-align: left;
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .formLeft .post{
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  .formLeft .describeQuestion{
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .formLeft .socialMedia{
+    margin: 0;
+  }
+  .post .addresses{
+    margin: 0;
+  }
+
+  .addresses .mailAddress{
+    display: none;
+  }
+  .addresses .hoverAddress{
+    display: inline;
+    color: white;
+  }
+}
+@media (max-width: 570px) {
+  .aboutMe{
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 700px) {
+  .navBar {
+    justify-content: center;
+  }
+  .navigation {
+    flex-wrap: wrap;
+  }
+  .navigation a{
+    padding: 10px;
+    margin: 0;
+    width: 50%;
+  }
+  .skills {
+    margin-top: 100px;
+}
+  .gallery{
+    height: 160vh;
+  }
+  .gallery .sec3{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "tall item3"
+    "tall item3"
+    "item1 item1"
+    "item2 item2"
+    "item4 item4";
+  }
+  
+  .overlay .picButton{
+    width: 30%;
+    height: 20%;
+    padding: 5px;
+    font-size: 1.5rem;
+    align-self: center;
+    margin-bottom: 0;
+  }
+
+  .overlay .picHeader{
+    font-size: 2rem;
+    padding-top: 0;
+    margin: 0;
+    align-self: center;
+  }
+
+  .picText{
+    display: none;
+  }
+ 
+  .form{
+    font-size: 90%;
+  }
+  .sec5 > *{
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+    .aboutMe .sec1{
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 150%;
+      justify-content: center;
+      top: 5%;
+    }
+
+    .sec1 .myData{
+      border-bottom: var(--rozowy) 4px dashed;
+      border-right: none;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 20px;
+      }
+    .sec1 .lifeStory{
+        text-align: justify;
+        margin-top: 0;
+        width: 100%;
+      }
+    .skills {
+        top: 350px;
+    }
+      
+    .skills .sec2{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        top: 20%;
+        right: 10%;
+        justify-items: center;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        flex: 1, 2, 1;
+      }
+      
+      .sec2 img{
+        box-sizing: content-box;
+        width: 200px;
+        height: 250px;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .sec2 .line{
+        border-bottom: dotted var(--pomaranczowy) 4px;
+        border-right: none;
+      }
+      
+      .gallery{
+        margin-top: 800px;
+      }
+      .overlay{
+        transition: 0.2;
+        transform: translateY(-150%);
+        }
+
+      .overlay p{
+          font-size: 1rem;
+        }
+      .picButton{
+        font-size: 1rem;
+      }
+        
+    }
